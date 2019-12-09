@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@+id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.horrorfan.title.TitleFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_title" />
+
+    <fragment
+        android:id="@+id/top10Fragment"
+        android:name="com.example.horrorfan.movie.Top10Fragment"
+        android:label="Top 10's"
+        tools:layout="@layout/fragment_top10">
+        <action
+            android:id="@+id/action_top10Fragment_to_movieFragment"
+            app:destination="@+id/movieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterListFragment"
+        android:name="com.example.horrorfan.icons.CharacterListFragment"
+        android:label="Iconic Characters"
+        tools:layout="@layout/fragment_characterlist" />
+    <fragment
+        android:id="@+id/seriesFragment"
+        android:name="com.example.horrorfan.series.SeriesFragment"
+        android:label="SeriesFragment" />
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.horrorfan.movie.MovieFragment"
+        android:label="Details">
+        <argument
+            android:name="movie_name"
+            app:argType="string" />
+    </fragment>
+</navigation>

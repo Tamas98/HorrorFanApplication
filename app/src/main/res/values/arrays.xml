@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="best_of_2019">
+        <item>Pet Semetary</item>
+        <item>IT:Chapter 2</item>
+        <item>Countdown</item>
+        <item>Brightburn</item>
+        <item>The Perfection</item>
+        <item>Child\'s Play</item>
+        <item>The Curse of La Llorona</item>
+        <item>Us</item>
+        <item>Ready or Not</item>
+        <item>The Prodigy</item>
+    </string-array>
+</resources>

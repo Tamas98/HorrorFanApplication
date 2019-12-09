@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Horror Fan</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="welcome_screen_text">Horror is a genre of speculative fiction which is intended to frighten, scare, disgust, or startle its readers by inducing feelings of horror and terror. Literary historian J. A. Cuddon defined the horror story as \"a piece of fiction in prose of variable length... which shocks, or even frightens the reader, or perhaps induces a feeling of repulsion or loathing\" It creates an eerie and frightening atmosphere. Horror is frequently supernatural, though it might be also non-supernatural. Often the central menace of a work of horror fiction can be interpreted as a metaphor for the larger fears of a society.</string>
+    <string name="top10_button_text">Top 10 Horror Movies</string>
+    <string name="top10_2019">2019 Top 10 Movie</string>
+    <string name="top10_2018">2018 Top 10 Movies</string>
+    <string name="top10_2017">2017 Top 10 Movies</string>
+    <string name="welcome_in_menu">Welcome Screen</string>
+    <string name="top_10_menu_text">Horror Top 10\'s</string>
+    <string name="placeholder">Placeholder</string>
+</resources>

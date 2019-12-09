@@ -1,0 +1,14 @@
+CREATE TABLE `Movies` (
+  `movieId` int(5) NOT NULL,
+  `title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `release_date` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `genres` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(500) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `Movies` (`movieId`, `title`, `release_date`, `genres`, `description`) VALUES
+(1, 'Hello', 'fsafas', 'gfasgas', 'gasgsa');
+
+ALTER TABLE `Movies`
+  ADD PRIMARY KEY (`movieId`);
+COMMIT;

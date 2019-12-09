@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.horrorfan.movie.Top10Fragment">
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/basic_background"
+        android:orientation="vertical">
+
+    <Button
+        android:id="@+id/top2019"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/top10_2019"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <LinearLayout
+        android:id="@+id/tops2019"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/top2018"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/top10_2018"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <Button
+        android:id="@+id/top2017"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/top10_2017"
+        android:textColor="@android:color/holo_red_dark" />
+
+</LinearLayout>
+</layout>

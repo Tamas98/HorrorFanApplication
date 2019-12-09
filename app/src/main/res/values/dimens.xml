@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="basic_margin">20dp</dimen>
+    <dimen name="basic_text_size">15sp</dimen>
+    <dimen name="basic_title_size">50sp</dimen>
+    <dimen name="basic_title_spacing">3</dimen>
+    <dimen name="basic_padding">10sp</dimen>
+    <dimen name="small_padding">5sp</dimen>
+</resources>
