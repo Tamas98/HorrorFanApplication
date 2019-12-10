@@ -44,6 +44,7 @@ class Top10Fragment : Fragment() {
     }
 
     private fun handleClick(layout: LinearLayout){
+
         best_of_2019.forEach {title->
             val button = Button(this.context)
             button.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT)

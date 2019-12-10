@@ -2,6 +2,7 @@ package com.example.horrorfan.database
 
 import android.content.Context
 import androidx.room.*
+import java.io.File
 
 @Database(entities = [Movies::class, Series::class, Characters::class], version = 1, exportSchema = false)
 abstract class HorrorDatabase : RoomDatabase() {
@@ -19,7 +20,7 @@ abstract class HorrorDatabase : RoomDatabase() {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         HorrorDatabase::class.java,
-                        "Movie").fallbackToDestructiveMigration().build()
+                        "Horror").createFromAsset("database/Horror.db").build()
                     INSTANCE = instance
                 }
                 return instance

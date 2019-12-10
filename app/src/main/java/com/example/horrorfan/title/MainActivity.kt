@@ -7,6 +7,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.horrorfan.R
+import com.example.horrorfan.database.HorrorDao
 import com.example.horrorfan.databinding.ActivityMainBinding
 import timber.log.Timber
 
