@@ -4,9 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".icons.CharacterListFragment">
 
-    <LinearLayout
+    <data>
+        <variable
+            name="top10ViewModel"
+            type="com.example.horrorfan.movie.Top10ViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"/>
+        android:orientation="vertical"
+        android:background="@color/basic_background">
+
+        <ScrollView
+            android:id="@+id/allMoviesListScroll"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="50dp"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/allCharacterList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:textAlignment="center" />
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

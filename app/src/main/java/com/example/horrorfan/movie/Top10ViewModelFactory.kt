@@ -5,12 +5,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.horrorfan.database.HorrorDao
 
-class MovieViewModelFactory(private val dataSource: HorrorDao, private val application: Application, private val title:String) : ViewModelProvider.Factory {
-
+class Top10ViewModelFactory(private val dataSource: HorrorDao, private var application: Application):ViewModelProvider.Factory{
     @Suppress("unchecked_cast")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(MovieViewModel::class.java)) {
-            return MovieViewModel(dataSource, application,title) as T
+        if (modelClass.isAssignableFrom(Top10ViewModel::class.java)) {
+            return Top10ViewModel(dataSource, application) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

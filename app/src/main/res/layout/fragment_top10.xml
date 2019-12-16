@@ -3,43 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.horrorfan.movie.Top10Fragment">
-<LinearLayout
+
+    <data>
+        <variable
+            name="top10ViewModel"
+            type="com.example.horrorfan.movie.Top10ViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/basic_background"
-        android:orientation="vertical">
-
-    <Button
-        android:id="@+id/top2019"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:text="@string/top10_2019"
-        android:textColor="@android:color/holo_red_dark" />
-
-    <LinearLayout
-        android:id="@+id/tops2019"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:orientation="vertical"
-        android:textAlignment="center"/>
+        android:background="@color/basic_background">
 
-    <Button
-        android:id="@+id/top2018"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:text="@string/top10_2018"
-        android:textColor="@android:color/holo_red_dark" />
+        <ScrollView
+            android:id="@+id/allMoviesListScroll"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="100dp"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
-    <Button
-        android:id="@+id/top2017"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:text="@string/top10_2017"
-        android:textColor="@android:color/holo_red_dark" />
+            <LinearLayout
+                android:id="@+id/allMoviesList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:textAlignment="center">
 
-</LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

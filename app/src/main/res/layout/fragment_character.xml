@@ -2,11 +2,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.navigation.MovieFragment">
+    tools:context="com.example.android.navigation.CharacterFragment">
 
     <data>
-        <variable name="movieViewModel"
-            type="com.example.horrorfan.movie.MovieViewModel"/>
+        <variable name="characterViewModel" type="com.example.horrorfan.icons.CharacterViewModel"/>
     </data>
 
     <ScrollView
@@ -25,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/basic_margin"
-                android:text="@{movieViewModel.movie.title}"
+                android:text="@{characterViewModel.character.name}"
                 android:textSize="@dimen/basic_title_size" />
 
             <TextView
@@ -33,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/basic_margin"
-                android:text="@{movieViewModel.movie.release_date}"
+                android:text="@{characterViewModel.character.first_appearance}"
                 android:textSize="@dimen/basic_text_size"
                 android:textStyle="bold" />
 
@@ -42,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/basic_margin"
-                android:text="@{movieViewModel.movie.genres}"
+                android:text="@{characterViewModel.character.movies}"
                 android:textSize="@dimen/basic_text_size"
                 android:textStyle="bold" />
 
@@ -59,7 +58,7 @@
                     android:textSize="@dimen/basic_text_size"
                     android:layout_margin="@dimen/basic_margin"
                     android:textStyle="bold"
-                    android:text="@{movieViewModel.movie.description}"/>
+                    android:text="@{characterViewModel.character.extras}"/>
 
             </ScrollView>
         </LinearLayout>

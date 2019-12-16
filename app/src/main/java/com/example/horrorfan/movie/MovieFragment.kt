@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.horrorfan.R
 import com.example.horrorfan.database.HorrorDatabase
@@ -22,7 +23,6 @@ class MovieFragment : Fragment() {
 
     private lateinit var movieViewModel: MovieViewModel
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,17 +31,18 @@ class MovieFragment : Fragment() {
             R.layout.fragment_movie,container,false)
         val application = requireNotNull(this.activity).application
         val dataSource = HorrorDatabase.getInstance(application).horrorDatabaseDao
-        //Timber.i("MovieFragment called MovieViewModel.of")
-        //movieViewModel = ViewModelProviders.of(this).get(MovieViewModel::class.java)
+
         val args = MovieFragmentArgs.fromBundle(arguments!!)
-        Toast.makeText(context, "Searched movie name: ${args.movieName}", Toast.LENGTH_LONG).show()
 
         val viewModelFactory = MovieViewModelFactory(dataSource,application,args.movieName)
         movieViewModel = ViewModelProviders.of(this,viewModelFactory).get(MovieViewModel::class.java)
         binding.setLifecycleOwner(this)
-//        dataSource.insertMovie(Movies(1L,"CountDown","fsafas","fsafaf","fsafasf"))
+
+        movieViewModel.movie.observe(this, Observer { new ->
+            binding.movieTitle.text = movieViewModel.movie.value?.title
+        })
+
         binding.movieViewModel = movieViewModel
-        binding.movieTitle.text = movieViewModel.movie.value!!.title
         return binding.root
     }
 

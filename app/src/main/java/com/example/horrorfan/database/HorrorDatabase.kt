@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.*
 import java.io.File
 
-@Database(entities = [Movies::class, Series::class, Characters::class], version = 1, exportSchema = false)
+@Database(entities = [Movies::class, Series::class, Characters::class], version = 10, exportSchema = false)
 abstract class HorrorDatabase : RoomDatabase() {
 
     abstract val horrorDatabaseDao: HorrorDao

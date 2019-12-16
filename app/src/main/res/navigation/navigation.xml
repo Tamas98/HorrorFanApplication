@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/top10Fragment"
         android:name="com.example.horrorfan.movie.Top10Fragment"
-        android:label="Top 10's"
+        android:label="Horror Movies"
         tools:layout="@layout/fragment_top10">
         <action
             android:id="@+id/action_top10Fragment_to_movieFragment"
@@ -24,11 +24,19 @@
         android:id="@+id/characterListFragment"
         android:name="com.example.horrorfan.icons.CharacterListFragment"
         android:label="Iconic Characters"
-        tools:layout="@layout/fragment_characterlist" />
+        tools:layout="@layout/fragment_characterlist" >
+        <action
+            android:id="@+id/action_characterListFragment_to_characterFragment"
+            app:destination="@id/characterFragment" />
+    </fragment>
     <fragment
         android:id="@+id/seriesFragment"
         android:name="com.example.horrorfan.series.SeriesFragment"
-        android:label="SeriesFragment" />
+        android:label="Horror Series">
+        <action
+            android:id="@+id/action_seriesFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/movieFragment"
         android:name="com.example.horrorfan.movie.MovieFragment"
@@ -37,4 +45,28 @@
             android:name="movie_name"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.horrorfan.series.DetailsFragment"
+        android:label="Series Details">
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="com.example.horrorfan.icons.CharacterFragment"
+        android:label="Character">
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/recycleFragment"
+        android:name="com.example.horrorfan.recycle.RecycleFragment"
+        android:label="Recycle Showcase" />
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="com.example.horrorfan.webservice.PostsFragment"
+        android:label="Posts" />
 </navigation>

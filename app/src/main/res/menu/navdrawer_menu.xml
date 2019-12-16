@@ -11,10 +11,18 @@
 
     <item
         android:id="@+id/characterListFragment"
-        android:title="Iconic Characters" />
+        android:title="@string/iconic_characters" />
 
     <item
         android:id="@+id/seriesFragment"
-        android:title="Horror Series"/>
+        android:title="@string/horror_series"/>
+
+    <item
+        android:id="@+id/recycleFragment"
+        android:title="Recycle View Showcase"/>
+
+    <item
+        android:id="@+id/postsFragment"
+        android:title="Posts"/>
 
 </menu>

@@ -2,11 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.android.navigation.MovieFragment">
+    tools:context="com.example.android.navigation.DetailsFragment">
 
     <data>
-        <variable name="movieViewModel"
-            type="com.example.horrorfan.movie.MovieViewModel"/>
+        <variable name="detailsViewModel"
+            type="com.example.horrorfan.series.DetailsViewModel"/>
     </data>
 
     <ScrollView
@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:fillViewport="true"
         android:scrollbars="none">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -25,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/basic_margin"
-                android:text="@{movieViewModel.movie.title}"
+                android:text="@{detailsViewModel.series.title}"
                 android:textSize="@dimen/basic_title_size" />
 
             <TextView
@@ -33,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/basic_margin"
-                android:text="@{movieViewModel.movie.release_date}"
+                android:text="@{detailsViewModel.series.on_air_date}"
                 android:textSize="@dimen/basic_text_size"
                 android:textStyle="bold" />
 
@@ -42,9 +41,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/basic_margin"
-                android:text="@{movieViewModel.movie.genres}"
+                android:text="@{detailsViewModel.series.genres}"
                 android:textSize="@dimen/basic_text_size"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/seasons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/basic_margin"
+                android:text="Placeholder"
+                android:textSize="@dimen/basic_text_size"
+                android:textStyle="bold" />
+
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -59,9 +68,12 @@
                     android:textSize="@dimen/basic_text_size"
                     android:layout_margin="@dimen/basic_margin"
                     android:textStyle="bold"
-                    android:text="@{movieViewModel.movie.description}"/>
+                    android:text="@{detailsViewModel.series.description}"/>
 
             </ScrollView>
+
         </LinearLayout>
+
     </ScrollView>
+
 </layout>

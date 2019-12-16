@@ -8,6 +8,9 @@
     <string name="top10_2018">2018 Top 10 Movies</string>
     <string name="top10_2017">2017 Top 10 Movies</string>
     <string name="welcome_in_menu">Welcome Screen</string>
-    <string name="top_10_menu_text">Horror Top 10\'s</string>
+    <string name="top_10_menu_text">Horror Movies</string>
     <string name="placeholder">Placeholder</string>
+    <string name="iconic_characters">Iconic Characters</string>
+    <string name="horror_series">Horror Series</string>
+    <string name="all_movie">All Movie</string>
 </resources>
